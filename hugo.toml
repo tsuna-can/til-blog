@@ -1,3 +1,16 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'http://localhost:1313/'
+languageCode = 'ja'
+languageName = 'Japanese'
+defaultContentLanguage = 'ja'
+hasCJKLanguage = true
+title = 'Tsunacan TIL'
+theme = 'PaperMod'
+
+[params]
+  text_color = 'dark-gray'
+  background_color_class = 'bg-navy'
+  author = 'Tsunacan'
+  disableSpecial1stPost = true
+  DateFormat = '2006-01-02'
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
