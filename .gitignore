@@ -1,0 +1,35 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo cache directory
+.hugo_build.lock
+
+# Temporary files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js dependencies (if using npm/yarn for theme development)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
