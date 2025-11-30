@@ -5,3 +5,11 @@
 ```bash
 hugo new article/記事名.md
 ```
+
+## 下書きを含めた記事のプレビュー
+
+```bash
+hugo server -D
+```
+
+
