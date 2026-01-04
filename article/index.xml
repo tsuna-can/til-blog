@@ -1,8 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Articles on Tsunacan TIL</title><link>https://tsuna-can.github.io/til-blog/article/</link><description>Recent content in Articles on Tsunacan TIL</description><generator>Hugo -- 0.153.4</generator><language>ja</language><lastBuildDate>Sun, 28 Dec 2025 13:43:07 +0900</lastBuildDate><atom:link href="https://tsuna-can.github.io/til-blog/article/index.xml" rel="self" type="application/rss+xml"/><item><title>SAML Authentication</title><link>https://tsuna-can.github.io/til-blog/article/2025-12-28_saml-authentication/</link><pubDate>Sun, 28 Dec 2025 13:43:07 +0900</pubDate><guid>https://tsuna-can.github.io/til-blog/article/2025-12-28_saml-authentication/</guid><description>&lt;h2 id="saml-認証とは"&gt;SAML 認証とは&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Articles on Tsunacan TIL</title><link>https://tsuna-can.github.io/til-blog/article/</link><description>Recent content in Articles on Tsunacan TIL</description><generator>Hugo -- 0.154.2</generator><language>ja</language><lastBuildDate>Sun, 28 Dec 2025 13:43:07 +0900</lastBuildDate><atom:link href="https://tsuna-can.github.io/til-blog/article/index.xml" rel="self" type="application/rss+xml"/><item><title>SAML Authentication</title><link>https://tsuna-can.github.io/til-blog/article/2025-12-28_saml-authentication/</link><pubDate>Sun, 28 Dec 2025 13:43:07 +0900</pubDate><guid>https://tsuna-can.github.io/til-blog/article/2025-12-28_saml-authentication/</guid><description>&lt;h2 id="saml-認証とは"&gt;SAML 認証とは&lt;/h2&gt;
 &lt;p&gt;SAML（Security Assertion Markup Language）は、XML ベースの認証情報を安全に交換するための規格。&lt;br&gt;
 SSO の実装の 1 つ。&lt;/p&gt;
 &lt;h2 id="saml-認証の構成要素"&gt;SAML 認証の構成要素&lt;/h2&gt;
-&lt;p&gt;IdP、SP、Principal の3つの構成要素が存在する。&lt;/p&gt;</description></item><item><title>NAT と NAPT と NAT-T</title><link>https://tsuna-can.github.io/til-blog/article/2025-11-30_nat-and-napt-and-nat-t/</link><pubDate>Sun, 30 Nov 2025 14:04:54 +0900</pubDate><guid>https://tsuna-can.github.io/til-blog/article/2025-11-30_nat-and-napt-and-nat-t/</guid><description>&lt;ul&gt;
+&lt;p&gt;IdP、SP、Principal の3つの構成要素が存在する。&lt;/p&gt;</description></item><item><title>Kerberos Authentication</title><link>https://tsuna-can.github.io/til-blog/article/2025-12-19_kerberos-authentication/</link><pubDate>Fri, 19 Dec 2025 23:37:52 +0900</pubDate><guid>https://tsuna-can.github.io/til-blog/article/2025-12-19_kerberos-authentication/</guid><description>&lt;h2 id="kerberos-認証とは"&gt;Kerberos 認証とは&lt;/h2&gt;
+&lt;p&gt;Kerberos 認証はチケットベースでの SSO を実現するプロトコル。&lt;br&gt;
+Windows Server Active Directory がユーザー認証で利用しているプロトコルとして有名。&lt;/p&gt;
+&lt;h2 id="kerberos-認証の用語"&gt;Kerberos 認証の用語&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Client
+&lt;ul&gt;
+&lt;li&gt;Client はサービスを利用したいユーザーやその PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;KDC（Key Distribution Center）
+&lt;ul&gt;
+&lt;li&gt;KDC は認証システムの中核で AS と TGS の 2 つの機能をもつ&lt;/li&gt;
+&lt;li&gt;すべての認証情報を管理し、チケットを発行する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AS（Authentication Server)
+&lt;ul&gt;
+&lt;li&gt;AS はユーザーの初回認証を行うサービス&lt;/li&gt;
+&lt;li&gt;ユーザー名とパスワードを確認し、成功すると TGT を発行する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TGS（Ticket Granting Server）
+&lt;ul&gt;
+&lt;li&gt;TGS はサービスへのアクセスに必要なチケットを発行する&lt;/li&gt;
+&lt;li&gt;ユーザーが TGT を提示すると、要求されたサービス用のチケットを生成する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TGT（Ticket Granting Ticket）
+&lt;ul&gt;
+&lt;li&gt;TGT はユーザーが認証済みであることを証明するチケット&lt;/li&gt;
+&lt;li&gt;これを使って複数のサービスチケットを取得することができる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;セッションキー
+&lt;ul&gt;
+&lt;li&gt;セッションキーは一時的な通信用の暗号鍵&lt;/li&gt;
+&lt;li&gt;AS からは TGS との通信用、TGS からは Service Server との通信用のセッションキーが発行される&lt;/li&gt;
+&lt;li&gt;Client 側でパスワードから生成した鍵で復号することで、サーバーの正当性も確認できる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Service Server
+&lt;ul&gt;
+&lt;li&gt;Service Server はユーザーが利用したいリソースやサービスを提供するサーバー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ST（Service Ticket）
+&lt;ul&gt;
+&lt;li&gt;Service Ticket は特定のサービスにアクセスするためのチケット&lt;/li&gt;
+&lt;li&gt;サービスごとに個別に発行される&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Principal
+&lt;ul&gt;
+&lt;li&gt;Principal は認証システムで識別される個々のエンティティのこと&lt;/li&gt;
+&lt;li&gt;ユーザーの場合、&lt;code&gt;username@REALM&lt;/code&gt; のように表す&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Realm
+&lt;ul&gt;
+&lt;li&gt;Realm は認証管理の境界を定義する論理的な管理ドメイン&lt;/li&gt;
+&lt;li&gt;同じ Realm に属するユーザーとサービスが認証を共有する&lt;/li&gt;
+&lt;li&gt;例： &lt;code&gt;EXAMPLE.COM&lt;/code&gt; など&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="kerberos-認証のフロー"&gt;Kerberos 認証のフロー&lt;/h2&gt;
+&lt;p&gt;Client が何と通信するかで大きく 3 段階に分けられる。&lt;/p&gt;</description></item><item><title>NAT と NAPT と NAT-T</title><link>https://tsuna-can.github.io/til-blog/article/2025-11-30_nat-and-napt-and-nat-t/</link><pubDate>Sun, 30 Nov 2025 14:04:54 +0900</pubDate><guid>https://tsuna-can.github.io/til-blog/article/2025-11-30_nat-and-napt-and-nat-t/</guid><description>&lt;ul&gt;
 &lt;li&gt;NAT : プライベートIPアドレスとグローバルIPアドレスを変換する技術全般&lt;/li&gt;
 &lt;li&gt;NAPT : NAT の一種で IP アドレスに加えてポート番号も変換する技術&lt;/li&gt;
 &lt;li&gt;NAT-T : NAT 環境で IPsec を使うための補助技術&lt;/li&gt;
